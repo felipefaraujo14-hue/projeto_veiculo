@@ -3,7 +3,7 @@ function calcularIPVA(valorVeiculo) {
 }
 
 function calcularSeguro(valorVeiculo) {
-    return valorVeiculo * 0.02;
+    return valorVeiculo * 0.10;
 }
 
 function calcularLicenciamento() {
