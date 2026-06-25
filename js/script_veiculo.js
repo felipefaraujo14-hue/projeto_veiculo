@@ -33,11 +33,18 @@ form.addEventListener("submit", function (e) {
     form.reset();
 });
 
+function excluirVeiculo(index) {
+    if (confirm("Deseja realmente excluir este veículo?")) {
+        veiculos.splice(index, 1);
+        exibirVeiculos();
+    }
+}
+
 function exibirVeiculos() {
 
     lista.innerHTML = "";
 
-    veiculos.forEach((veiculo) => {
+    veiculos.forEach((veiculo, index) => {
 
         const idade =
             new Date().getFullYear() - veiculo.ano;
@@ -63,6 +70,8 @@ function exibirVeiculos() {
 
                 <p><strong>Placa:</strong> ${veiculo.placa}</p>
 
+                <p><strong>Combustível:</strong> ${veiculo.combustivel}</p>
+
                 <p><strong>Idade:</strong> ${idade} anos</p>
 
                 <p><strong>Seguro:</strong>
@@ -76,6 +85,10 @@ function exibirVeiculos() {
 
                 <p><strong>Valor Final:</strong>
                 R$ ${valorFinal.toFixed(2)}</p>
+
+                <button onclick="excluirVeiculo(${index})">
+                    Excluir
+                </button>
 
             </div>
         `;
