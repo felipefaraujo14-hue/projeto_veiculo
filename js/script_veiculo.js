@@ -28,17 +28,17 @@ form.addEventListener("submit", function (e) {
 
     veiculos.push(veiculo);
 
-    excluirVeiculos();
+    atualizarLista();
 
     form.reset();
 });
 
 function excluirVeiculo(index) {
     veiculos.splice(index, 1);
-    excluirVeiculos();
+    atualizarLista();
 }
 
-function excluirVeiculos() {
+function atualizarLista() {
 
     lista.innerHTML = "";
 
@@ -48,10 +48,16 @@ function excluirVeiculos() {
             new Date().getFullYear() - veiculo.ano;
 
         const ipva =
-            calcularIPVA(veiculo.valor);
+            calcularIPVA(
+                veiculo.valor,
+                veiculo.combustivel
+            );
 
         const seguro =
-            calcularSeguro(veiculo.valor);
+            calcularSeguro(
+                veiculo.valor,
+                veiculo.combustivel
+            );
 
         const licenciamento =
             calcularLicenciamento();
@@ -72,17 +78,13 @@ function excluirVeiculos() {
 
                 <p><strong>Idade:</strong> ${idade} anos</p>
 
-                <p><strong>Seguro:</strong>
-                R$ ${seguro.toFixed(2)}</p>
+                <p><strong>Seguro:</strong> R$ ${seguro.toFixed(2)}</p>
 
-                <p><strong>IPVA:</strong>
-                R$ ${ipva.toFixed(2)}</p>
+                <p><strong>IPVA:</strong> R$ ${ipva.toFixed(2)}</p>
 
-                <p><strong>Licenciamento:</strong>
-                R$ ${licenciamento.toFixed(2)}</p>
+                <p><strong>Licenciamento:</strong> R$ ${licenciamento.toFixed(2)}</p>
 
-                <p><strong>Valor Final:</strong>
-                R$ ${valorFinal.toFixed(2)}</p>
+                <p><strong>Valor Final:</strong> R$ ${valorFinal.toFixed(2)}</p>
 
                 <button onclick="excluirVeiculo(${index})">
                     Excluir
