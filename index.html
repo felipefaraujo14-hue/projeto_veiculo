@@ -6,6 +6,7 @@
     <title>Cadastro de veículos</title>
 
     <link rel="stylesheet" href="css/style_veiculo.css">
+
     <script src="js/script_calculo.js" defer></script>
     <script src="js/script_veiculo.js" defer></script>
 </head>
@@ -13,19 +14,23 @@
 
     <div class="container">
 
-        <h1>Cadastro de veículos</h1>
+        <h1>Cadastro de Veículos</h1>
 
         <form id="formVeiculo">
 
-            <label>Marca</label>
+            <label for="marca">Marca</label>
             <input type="text" id="marca" required>
-            <label>Modelo</label>
+
+            <label for="modelo">Modelo</label>
             <input type="text" id="modelo" required>
-            <label>Placa</label>
+
+            <label for="placa">Placa</label>
             <input type="text" id="placa" required>
-            <label>Ano de fabricação</label>
+
+            <label for="ano">Ano de fabricação</label>
             <input type="number" id="ano" required>
-            <label>Valor de mercado</label>
+
+            <label for="valor">Valor de mercado</label>
             <input type="number" id="valor" step="0.01" required>
 
             <h3>Tipo de combustível</h3>
@@ -53,15 +58,16 @@
             <br><br>
 
             <button type="submit">Adicionar</button>
-        
+
         </form>
 
         <hr>
+
         <h2>Lista de veículos</h2>
+
         <div id="listaVeiculos"></div>
 
     </div>
-
 
 </body>
 </html>
