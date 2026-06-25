@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Veículos</title>
+    <title>Cadastro de veículos</title>
 
     <link rel="stylesheet" href="css/style_veiculo.css">
 </head>
@@ -11,7 +11,7 @@
 
     <div class="container">
 
-        <h1>Cadastro de Veículos</h1>
+        <h1>Cadastro de veículos</h1>
 
         <form id="formVeiculo">
 
@@ -21,12 +21,12 @@
             <input type="text" id="modelo" required>
             <label>Placa</label>
             <input type="text" id="placa" required>
-            <label>Ano de Fabricação</label>
+            <label>Ano de fabricação</label>
             <input type="number" id="ano" required>
-            <label>Valor de Mercado</label>
+            <label>Valor de mercado</label>
             <input type="number" id="valor" step="0.01" required>
 
-            <h3>Tipo de Combustível</h3>
+            <h3>Tipo de combustível</h3>
 
             <label>
                 <input type="radio" name="combustivel" value="Gasolina" required>
@@ -39,8 +39,8 @@
             </label>
 
             <label>
-                <input type="radio" name="combustivel" value="Flex">
-                Flex
+                <input type="radio" name="combustivel" value="GNV">
+                GNV
             </label>
 
             <label>
@@ -51,13 +51,12 @@
             <br><br>
 
             <button type="submit">Adicionar</button>
+            <button type="reset">Excluir</button>
 
         </form>
 
         <hr>
-
-        <h2>Lista de Veículos</h2>
-
+        <h2>Lista de veículos</h2>
         <div id="listaVeiculos"></div>
 
     </div>
