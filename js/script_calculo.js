@@ -1,11 +1,11 @@
-export function calcularIPVA(valorVeiculo) {
+function calcularIPVA(valorVeiculo) {
     return valorVeiculo * 0.04;
 }
 
-export function calcularSeguto(valorVeiculo) {
+function calcularSeguro(valorVeiculo) {
     return valorVeiculo * 0.02;
 }
 
-export function calcularLicenciamento() {
+function calcularLicenciamento() {
     return 150;
 }
