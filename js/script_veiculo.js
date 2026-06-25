@@ -28,19 +28,17 @@ form.addEventListener("submit", function (e) {
 
     veiculos.push(veiculo);
 
-    exibirVeiculos();
+    excluirVeiculos();
 
     form.reset();
 });
 
 function excluirVeiculo(index) {
-    if (confirm("Deseja realmente excluir este veículo?")) {
-        veiculos.splice(index, 1);
-        exibirVeiculos();
-    }
+    veiculos.splice(index, 1);
+    excluirVeiculos();
 }
 
-function exibirVeiculos() {
+function excluirVeiculos() {
 
     lista.innerHTML = "";
 
