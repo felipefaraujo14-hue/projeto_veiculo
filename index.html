@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Veiculo</title>
+    <title>Cadastro de Veículos</title>
+
     <link rel="stylesheet" href="css/style_veiculo.css">
-    <script src=""></script>
 </head>
 <body>
+
     <div class="container">
 
         <h1>Cadastro de Veículos</h1>
@@ -16,19 +17,52 @@
 
             <label>Marca</label>
             <input type="text" id="marca" required>
-
             <label>Modelo</label>
             <input type="text" id="modelo" required>
-
             <label>Placa</label>
             <input type="text" id="placa" required>
-
-            <label>Ano de fabricação</label>
+            <label>Ano de Fabricação</label>
             <input type="number" id="ano" required>
-            
-            <label>Valor de mercado</label>
+            <label>Valor de Mercado</label>
             <input type="number" id="valor" step="0.01" required>
 
+            <h3>Tipo de Combustível</h3>
+
+            <label>
+                <input type="radio" name="combustivel" value="Gasolina" required>
+                Gasolina
+            </label>
+
+            <label>
+                <input type="radio" name="combustivel" value="Etanol">
+                Etanol
+            </label>
+
+            <label>
+                <input type="radio" name="combustivel" value="Flex">
+                Flex
+            </label>
+
+            <label>
+                <input type="radio" name="combustivel" value="Diesel">
+                Diesel
+            </label>
+
+            <br><br>
+
+            <button type="submit">Adicionar</button>
+
+        </form>
+
+        <hr>
+
+        <h2>Lista de Veículos</h2>
+
+        <div id="listaVeiculos"></div>
+
+    </div>
+
+    <script type="module" src="js/script_veiculo.js"></script>
 
 </body>
 </html>
